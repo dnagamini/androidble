@@ -46,6 +46,7 @@ public class BluetoothLeService extends Service {
     private BluetoothAdapter mBluetoothAdapter;
     private String mBluetoothDeviceAddress;
     private BluetoothGatt mBluetoothGatt;
+    private BluetoothGattService mBluetoothGattService;
     private int mConnectionState = STATE_DISCONNECTED;
 
     private static final int STATE_DISCONNECTED = 0;
@@ -63,7 +64,7 @@ public class BluetoothLeService extends Service {
     public final static String EXTRA_DATA =
             "com.example.bluetooth.le.EXTRA_DATA";
 
-    public final static UUID UUID_HEART_RATE_MEASUREMENT =
+    public final static UUID UUID_HM_10 =
             UUID.fromString(SampleGattAttributes.HM_10);
 
     // Implements callback methods for GATT events that the app cares about.  For example,
@@ -316,7 +317,7 @@ public class BluetoothLeService extends Service {
         mBluetoothGatt.setCharacteristicNotification(characteristic, enabled);
 
         // This is specific to Heart Rate Measurement.
-        if (UUID_HEART_RATE_MEASUREMENT.equals(characteristic.getUuid())) {
+        if (UUID_HM_10.equals(characteristic.getUuid())) {
             BluetoothGattDescriptor descriptor = characteristic.getDescriptor(
                     UUID.fromString(SampleGattAttributes.CLIENT_CHARACTERISTIC_CONFIG));
             descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
@@ -335,5 +336,33 @@ public class BluetoothLeService extends Service {
 
         return mBluetoothGatt.getServices();
     }
+
+    public BluetoothGattService check_HM_10_gatt_service(){
+        if (mBluetoothGatt == null) {
+            return null;
+        }
+        UUID UUID_HM_10_service = UUID.fromString("0000ffe0-0000-1000-8000-00805f9b34fb");
+        return mBluetoothGatt.getService(UUID_HM_10_service);
+    }
+
+    public boolean send(byte[] data) {
+        if (mBluetoothGatt == null || mBluetoothGattService == null) {
+            Log.w(TAG, "BluetoothGatt not initialized");
+            return false;
+        }
+
+        BluetoothGattCharacteristic characteristic =
+                mBluetoothGattService.getCharacteristic(UUID.fromString(SampleGattAttributes.HM_10));
+
+        if (characteristic == null) {
+            Log.w(TAG, "Send characteristic not found");
+            return false;
+        }
+
+        characteristic.setValue(data);
+        characteristic.setWriteType(BluetoothGattCharacteristic.WRITE_TYPE_NO_RESPONSE);
+        return mBluetoothGatt.writeCharacteristic(characteristic);
+    }
+
 
 }
