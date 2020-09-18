@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "212148820000",
+    "firebase_url": "https://android-can-ea66e.firebaseio.com",
+    "project_id": "android-can-ea66e",
+    "storage_bucket": "android-can-ea66e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212148820000:android:87d50e37cf5977c05cc445",
+        "android_client_info": {
+          "package_name": "com.example.android.bluetoothlegatt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212148820000-3e1f11rienguo4ikn0mbd7j29hmn3go0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2FBTujLRPXbA64y-QXs4wm5Oo7_ivE6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212148820000-3e1f11rienguo4ikn0mbd7j29hmn3go0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

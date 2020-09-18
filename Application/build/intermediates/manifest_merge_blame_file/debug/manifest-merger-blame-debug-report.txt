@@ -1,0 +1,158 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.android.bluetoothlegatt" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="21"
+6-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="28" />
+7-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml
+8
+9    <!--
+10    android:versionCode="1"
+11    android:versionName="1.0">
+12    -->
+13
+14
+15    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+16    <!--
+17 Declare this required feature if you want to make the app available to BLE-capable
+18    devices only.  If you want to make your app available to devices that don't support BLE,
+19    you should omit this in the manifest.  Instead, determine BLE capability by using
+20    PackageManager.hasSystemFeature(FEATURE_BLUETOOTH_LE)
+21    -->
+22    <uses-feature
+22-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:17:5-19:35
+23        android:name="android.hardware.bluetooth_le"
+23-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:18:9-53
+24        android:required="true" />
+24-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:19:9-32
+25
+26    <uses-permission android:name="android.permission.BLUETOOTH" />
+26-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:21:5-68
+26-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:21:22-65
+27    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+27-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:22:5-74
+27-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:22:22-71
+28    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+28-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:23:5-81
+28-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:23:22-78
+29
+30    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+31    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+32    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+32-->[com.google.firebase:firebase-database:19.3.1] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\2e51fe1ec983896a73a8eef5e4eee40e\firebase-database-19.3.1\AndroidManifest.xml:25:5-79
+32-->[com.google.firebase:firebase-database:19.3.1] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\2e51fe1ec983896a73a8eef5e4eee40e\firebase-database-19.3.1\AndroidManifest.xml:25:22-76
+33    <uses-permission android:name="android.permission.INTERNET" />
+33-->[com.google.firebase:firebase-database:19.3.1] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\2e51fe1ec983896a73a8eef5e4eee40e\firebase-database-19.3.1\AndroidManifest.xml:26:5-67
+33-->[com.google.firebase:firebase-database:19.3.1] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\2e51fe1ec983896a73a8eef5e4eee40e\firebase-database-19.3.1\AndroidManifest.xml:26:22-64
+34
+35    <application
+35-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:25:5-47:19
+36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+36-->[androidx.core:core:1.3.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\1922d04007e5cf668721e843b5900414\core-1.3.0\AndroidManifest.xml:24:18-86
+37        android:debuggable="true"
+38        android:icon="@drawable/ic_launcher"
+38-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:26:9-45
+39        android:label="@string/app_name"
+39-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:27:9-41
+40        android:testOnly="true"
+41        android:theme="@style/AppTheme" >
+41-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:28:9-40
+42        <activity
+42-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:29:9-37:20
+43            android:name="com.example.android.bluetoothlegatt.DeviceScanActivity"
+43-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:30:13-47
+44            android:label="@string/app_name" >
+44-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:31:13-45
+45            <intent-filter>
+45-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:32:13-36:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:33:17-69
+46-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:33:25-66
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:35:17-77
+48-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:35:27-74
+49            </intent-filter>
+50        </activity>
+51        <activity android:name="com.example.android.bluetoothlegatt.DeviceControlActivity" />
+51-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:39:9-59
+51-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:39:19-56
+52        <activity android:name="com.example.android.bluetoothlegatt.NewWordActivity" />
+52-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:41:9-62
+52-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:41:19-50
+53        <activity android:name="com.example.android.bluetoothlegatt.PeriodicMessageActivity" />
+53-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:42:9-61
+53-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:42:19-58
+54
+55        <service
+55-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:44:9-46:38
+56            android:name="com.example.android.bluetoothlegatt.BluetoothLeService"
+56-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:45:13-47
+57            android:enabled="true" />
+57-->C:\Users\dnaga\AndroidStudioProjects\BluetoothLeGatt3\Application\src\main\AndroidManifest.xml:46:13-35
+58        <service
+58-->[androidx.room:room-runtime:2.2.5] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\bd8ad8eb484caf22c012f2502dec9fad\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+59            android:name="androidx.room.MultiInstanceInvalidationService"
+59-->[androidx.room:room-runtime:2.2.5] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\bd8ad8eb484caf22c012f2502dec9fad\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+60            android:directBootAware="true"
+60-->[androidx.room:room-runtime:2.2.5] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\bd8ad8eb484caf22c012f2502dec9fad\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+61            android:exported="false" />
+61-->[androidx.room:room-runtime:2.2.5] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\bd8ad8eb484caf22c012f2502dec9fad\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+62        <service
+62-->[com.google.firebase:firebase-database:19.3.1] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\2e51fe1ec983896a73a8eef5e4eee40e\firebase-database-19.3.1\AndroidManifest.xml:29:9-35:19
+63            android:name="com.google.firebase.components.ComponentDiscoveryService"
+63-->[com.google.firebase:firebase-database:19.3.1] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\2e51fe1ec983896a73a8eef5e4eee40e\firebase-database-19.3.1\AndroidManifest.xml:30:13-84
+64            android:directBootAware="true"
+64-->[com.google.firebase:firebase-common:19.3.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\0bbf54035bf33d9356c41a23786d4f20\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+65            android:exported="false" >
+65-->[com.google.firebase:firebase-database:19.3.1] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\2e51fe1ec983896a73a8eef5e4eee40e\firebase-database-19.3.1\AndroidManifest.xml:31:13-37
+66            <meta-data
+66-->[com.google.firebase:firebase-database:19.3.1] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\2e51fe1ec983896a73a8eef5e4eee40e\firebase-database-19.3.1\AndroidManifest.xml:32:13-34:85
+67                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+67-->[com.google.firebase:firebase-database:19.3.1] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\2e51fe1ec983896a73a8eef5e4eee40e\firebase-database-19.3.1\AndroidManifest.xml:33:17-109
+68                android:value="com.google.firebase.components.ComponentRegistrar" />
+68-->[com.google.firebase:firebase-database:19.3.1] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\2e51fe1ec983896a73a8eef5e4eee40e\firebase-database-19.3.1\AndroidManifest.xml:34:17-82
+69        </service>
+70
+71        <activity
+71-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\503246db64dcbb120c121745b36c75fd\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+72            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+72-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\503246db64dcbb120c121745b36c75fd\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+73            android:exported="false"
+73-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\503246db64dcbb120c121745b36c75fd\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+74            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+74-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\503246db64dcbb120c121745b36c75fd\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+75
+76        <provider
+76-->[com.google.firebase:firebase-common:19.3.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\0bbf54035bf33d9356c41a23786d4f20\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+77            android:name="com.google.firebase.provider.FirebaseInitProvider"
+77-->[com.google.firebase:firebase-common:19.3.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\0bbf54035bf33d9356c41a23786d4f20\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+78            android:authorities="com.example.android.bluetoothlegatt.firebaseinitprovider"
+78-->[com.google.firebase:firebase-common:19.3.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\0bbf54035bf33d9356c41a23786d4f20\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+79            android:exported="false"
+79-->[com.google.firebase:firebase-common:19.3.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\0bbf54035bf33d9356c41a23786d4f20\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+80            android:initOrder="100" />
+80-->[com.google.firebase:firebase-common:19.3.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\0bbf54035bf33d9356c41a23786d4f20\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+81
+82        <meta-data
+82-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\da8cc85cee26905bfc015b4289adf197\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+83            android:name="com.google.android.gms.version"
+83-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\da8cc85cee26905bfc015b4289adf197\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+84            android:value="@integer/google_play_services_version" />
+84-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\da8cc85cee26905bfc015b4289adf197\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+85
+86        <provider
+86-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\0af15b4380a8429fdc5ee80ba1c4d93c\lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+87            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+87-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\0af15b4380a8429fdc5ee80ba1c4d93c\lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+88            android:authorities="com.example.android.bluetoothlegatt.lifecycle-process"
+88-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\0af15b4380a8429fdc5ee80ba1c4d93c\lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+89            android:exported="false"
+89-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\0af15b4380a8429fdc5ee80ba1c4d93c\lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+90            android:multiprocess="true" />
+90-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\dnaga\.gradle\caches\transforms-2\files-2.1\0af15b4380a8429fdc5ee80ba1c4d93c\lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+91    </application>
+92
+93</manifest>
